@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title></title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+@font-face {
+    font-family: GenshinFont;
+    src: url('zh-cn.tff');
+  }
+</style>
+  
+  </head>
+<body class="body2" id="body">
+   <img class="Amber3" id="Amber3" src="Amber3.webp" >
+</img>
+  
+  <img class="Euler3" id="Euler3" src="Euler3.webp">
+</img>
+  
+    <img class="Map1" id="Map1" src="Map1.png">
+</img>
+  
+   <button class="AmberButton" id="AmberButton"  onclick="hideMap();showCharacter();hideButtons();changeHeader('About Me');showParagraph('My name is Jerry Li, an international student from China, <br>currently studying at St.Anne\'s-Belfield School. This is my thrid year <br>learninng Computer Science. I have learned Java, Python, and html+CSS.');"> 
+  </button>
+  
+  <button class="EulerButton" id="EulerButton"  onclick="hideMap();showCharacter2();hideButtons();changeHeader('My interests');showParagraph('I love quantum physics. I love playing the piano. I love playing Genshin Impact and Star：Rail.');"> 
+  </button>
+  
+   <button class="return" id="modifier2" onclick="goToPage('index.html')">
+  </button>
+
+  <h1  id="header"> 
+  Click the Characters to know more about me.
+  </h1>
+  
+  <p1 id="paragraph">
+  </p1>
+  
+  <script> 
+    function goToPage(url) {
+location.replace(url);
+    }
+    
+    function hideMap() {
+    document.getElementById('Map1').style.display = "none";
+    }
+
+    function hideButtons(){
+    document.getElementById('AmberButton').style.display = "none";
+    document.getElementById('EulerButton').style.display = "none";
+    }
+    
+    function showCharacter () {
+    document.getElementById('Amber3').style.display = "block";
+    }
+    
+    function showCharacter2() {
+    document.getElementById('Euler3').style.display = "block";
+    }
+
+    function changeHeader(text) {
+    document.getElementById('header').innerHTML = text;
+    } 
+    
+    function showParagraph(text){
+    document.getElementById('paragraph').innerHTML = text;
+    }
+  </script>
+</body>
+</html>

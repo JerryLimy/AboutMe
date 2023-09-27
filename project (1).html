@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title></title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+@font-face {
+    font-family: GenshinFont;
+    src: url('zh-cn.tff');
+  }
+</style>
+</head>
+<body class="body3" id="body">
+  
+  <img class="Hutao3" id="Hutao3" src="Hutao3.webp">
+</img>
+  
+  <img class="Ganyu3" id="Ganyu3" src="Ganyu3.webp">
+</img>
+  
+  <img class="Map2" id="Map2" src="Map2.png">
+</img>
+  
+  <button id="HutaoButton" class="HutaoButton" 
+   onclick="hideMap(); hideButtons(); showCharacter();changeTitle('Poker Project');showImage();"> 
+  </button>
+  
+   <button id="GanyuButton" class="GanyuButton" 
+     onclick="hideMap(); hideButtons(); showCharacter2();changeTitle('Characters Drawing Project');showImage2();"> 
+  </button>
+  
+  <button class="return" id="modifier2" onclick="goToPage('index.html')">
+  </button>
+  
+  <h1 id="header">
+    Click the Characters to know more about me.
+  </h1>
+  
+  <a href="https://github.com/JerryLimy/PokerProject" target="_blank">
+    <img id="Poker" src="Poker.png" onmouseover="changeTitle('Click it to know more.')" onmouseleave="changeTitle('Poker Project')">
+  </a>
+
+  <a href="https://github.com/JerryLimy/GenshinCharactersDrawingTestingProject.git" target="_blank">
+    <img id="GCDTP" src="GCDTP.png" onmouseover="changeTitle('Click it to know more.')" onmouseleave="changeTitle('Characters Drawing Project')">
+  </a>
+  
+  <script>
+    function goToPage(url) {
+    location.replace(url);
+    }
+    
+    function hideMap() {
+    document.getElementById('Map2').style.display = "none";
+    }
+
+    function hideButtons(){
+    document.getElementById('HutaoButton').style.display = "none";
+    document.getElementById('GanyuButton').style.display = "none";
+    }
+    
+    function showCharacter(){
+    document.getElementById('Hutao3').style.display = "block";
+    }
+
+    function showCharacter2(){
+    document.getElementById('Ganyu3').style.display = "block";
+    }
+    
+    function changeTitle(text) {
+    document.getElementById('header').innerHTML = text;
+    } 
+    
+    function showImage(){
+    document.getElementById('Poker').style.display = "block";
+    }
+
+    function showImage2(){
+    document.getElementById('GCDTP').style.display = "block";
+    }
+
+  </script>
+</body>
+</html>
